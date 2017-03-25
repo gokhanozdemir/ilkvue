@@ -5,12 +5,24 @@
   <body>
  <div id="app">
    {{ message }}
+   <div v-if="someflag" class="hidendiv">
+     asdf
    </div>
+    {{ reversedmessage }}
+  </div>
+  
    <script>
      let app = new Vue({
        el: '#app',
        data: {
-         message: 'hello'
+         message: 'hello',
+         someflag: true,
+         somedata: 'xyz'
+       },
+       computed: {
+        reversedmessage () {
+          return this.message.split('').reverse().join('')
+        }
        }
      })
      </script>   
