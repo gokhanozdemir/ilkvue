@@ -1,12 +1,21 @@
-<html>
+<html lang="tr">
   <head>
     <script src="https://unpkg.com/vue"></script>
   </head>
   <body>
  <div id="app">
+   <input v-model="message">
    {{ message }}
    <div v-if="someflag" class="hidendiv">
      asdf
+   </div>
+   <div v-for="datacik in jdata">
+     <a href="{{datacik.url}}">
+          <div class="view-12-image" bg-src="{{datacik.image}}">
+          <span class="{{datacik.type}}"></span>
+          <h2 class="h2-class">{{datacik.title}}</h2>
+      </div>
+    </a>
    </div>
     {{ reversedmessage }}
   </div>
@@ -17,7 +26,162 @@
        data: {
          message: 'hello',
          someflag: true,
-         somedata: 'xyz'
+         somedata: 'xyz',
+         jdata: [
+            {
+              "title": "Samsung yeni 2016 bombasını patlattı! Nunc dignissim risus id metus.",
+              "image": "361/760",
+              "url": "./news-detail.html",
+              "view": "1234",
+              "comment": "5",
+              "time": "19:47",
+              "type": "gal"
+            },
+            {
+              "title": "Nunc dignissim risus id metus. Aliquam tincidunt mauris eu risus. Vestibulum auctor dapibus neque.",
+              "image": "361/750",
+              "url": "./news-detail.html",
+              "view": "213",
+              "comment": "5",
+              "time": "19:47",
+              "type": "gal"
+            },
+            {
+              "title": "Vestibulum auctor dapibus neque. Aliquam tincidunt mauris eu risus. Vestibulum auctor dapibus neque.",
+              "image": "362/750",
+              "url": "./news-detail.html",
+              "view": "162",
+              "comment": "5",
+              "time": "19:47",
+              "type": ""
+            },
+            {
+              "title": "Nunc dignissim risus id metus.",
+              "image": "363/750",
+              "url": "./news-detail.html",
+              "view": "7531",
+              "comment": "5",
+              "time": "19:47",
+              "type": "vid"
+            },
+            {
+              "title": "Cras ornare tristique elit.",
+              "image": "364/750",
+              "url": "./news-detail.html",
+              "view": "213",
+              "comment": "5",
+              "time": "19:47",
+              "type": ""
+            },
+            {
+              "title": "Vivamus vestibulum nulla nec ante.",
+              "image": "365/750",
+              "url": "./news-detail.html",
+              "view": "31",
+              "comment": "5",
+              "time": "19:47",
+              "type": "vid"
+            },
+            {
+              "title": "Praesent placerat risus quis eros.",
+              "image": "366/750",
+              "url": "./news-detail.html",
+              "view": "121",
+              "comment": "5",
+              "time": "19:47",
+              "type": ""
+            },
+            {
+              "title": "Fusce pellentesque suscipit nibh.",
+              "image": "360/751",
+              "url": "./news-detail.html",
+              "view": "213",
+              "comment": "5",
+              "time": "19:47",
+              "type": ""
+            },
+            {
+              "title": "Integer vitae libero ac risus egestas placerat.",
+              "image": "360/752",
+              "url": "./news-detail.html",
+              "view": "11231",
+              "comment": "5",
+              "time": "19:47",
+              "type": ""
+            },
+            {
+              "title": "Vestibulum commodo felis quis tortor.",
+              "image": "360/753",
+              "url": "./news-detail.html",
+              "view": "123",
+              "comment": "5",
+              "time": "19:47",
+              "type": ""
+            },
+            {
+              "title": "Ut aliquam sollicitudin leo.",
+              "image": "360/754",
+              "url": "./news-detail.html",
+              "view": "5",
+              "comment": "5",
+              "time": "19:47",
+              "type": "vid"
+            },
+            {
+              "title": "Cras iaculis ultricies nulla.",
+              "image": "360/755",
+              "url": "./news-detail.html",
+              "view": "12364321",
+              "comment": "5",
+              "time": "19:47",
+              "type": "gal"
+            },
+            {
+              "title": "Donec quis dui at dolor tempor interdum.",
+              "image": "360/756",
+              "url": "./news-detail.html",
+              "view": "213351",
+              "comment": "5",
+              "time": "19:47",
+              "type": ""
+            },
+            {
+              "title": "Vivamus molestie graa turpis.",
+              "image": "361/751",
+              "url": "./news-detail.html",
+              "view": "1134231",
+              "comment": "5",
+              "time": "19:47",
+              "type": ""
+            },
+            {
+              "title": "Fusce lobortis lorem at ipsum semper sagittis.",
+              "image": "369/750",
+              "url": "./news-detail.html",
+              "view": "12123431",
+              "comment": "5",
+              "time": "19:47",
+              "type": ""
+            },
+            {
+              "title": "Nam convallis pellentesque nisl.",
+              "image": "368/750",
+              "url": "./news-detail.html",
+              "view": "133",
+              "comment": "5",
+              "time": "19:47",
+              "type": "gal"
+            },
+            {
+              "title": "Integer malesuada commodo nulla.",
+              "image": "360/758",
+              "url": "./news-detail.html",
+              "view": "1232431",
+              "comment": "5",
+              "time": "19:47",
+              "type": "vid"
+            }
+          ]
        },
        computed: {
         reversedmessage () {
